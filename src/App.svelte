@@ -1,5 +1,5 @@
 <script>
-	export let name;
+	// export let name;
 	import  Navbar  from "./pages/Navbar.svelte";
 	import  SectionA  from "./pages/Section-A.svelte";
 	import  SectionB  from "./pages/Section-B.svelte";
@@ -14,8 +14,10 @@
 
 <style>
 	main{
-		/* font-family: sans-serif; */
+		font-family: 'Basic', sans-serif;
 	}
+	
+
 </style>
 
 <main>

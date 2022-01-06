@@ -16,6 +16,7 @@
         line-height: 13px;
         height: 48px;
         border-radius: 0;
+        border: none;
     }
     .footer{
         background-color: #020E35;
@@ -25,7 +26,7 @@
     }
 </style>
 
-<div class="container my-5">
+<div id="contact" class="container my-5">
     <div class="row">
         <div class="col">
             <h2>Questions, Comments, Concerns?</h2>
@@ -48,7 +49,7 @@
                     <label>Message</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Your message starts with…"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block ">Send a Message</button>
+                <button class="btn btn-primary btn-lg btn-block ">Send a Message</button>
               </form>
         </div>
     </div>
@@ -60,7 +61,6 @@
         <div class="row h-100 align-items-center">
             <div class="col">
                 <p class="my-auto">2020 © All rights reserved by Your company name</p>
-
             </div>
         </div>
     </div>

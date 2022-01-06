@@ -1,40 +1,9 @@
-<style>
-    .background{
-        background-color: #020E35;
-        color: white;
-    }
-    h1{
-        size: 40px;
-    }
-    h2{
-        font-size: 30px;
-        line-height: 38px;
-    }
-    h3{
-        font-size: 15px;
-        letter-spacing: 3px;
-        line-height: 19px;
-    }
-    p{
-        font-size: 16px;
-        line-height: 20px;
-    }
-    button{
-        background: linear-gradient(270deg, #8C32F0 0%, #E73587 100%);
-        color: white;
-        border-radius: 0;
-        width: 140px;
-        height: 40px;
-        font-size: 12px;
-        line-height: 15.1px;
-    }
-</style>
-
-<div class="container-fluid background m-0 p-0">
+<div id="portofolio" class="container-fluid background mx-0 px-0">
     <div class="container py-5">
         <div class="row text-center">
             <div class="col">
-                <h1>Our Work</h1>
+                <h1 style="margin-bottom: -10px;">Our Work</h1>
+                <img src="images/line.svg" alt="" srcset="">
             </div>
         </div>
     
@@ -88,3 +57,39 @@
     </div>
 
 </div>
+
+<style>
+    .background{
+        background-color: #020E35;
+        color: white;
+    }
+    h1{
+        size: 40px;
+    }
+    h2{
+        font-size: 30px;
+        line-height: 38px;
+    }
+    h3{
+        font-size: 15px;
+        letter-spacing: 3px;
+        line-height: 19px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    button{
+        background: linear-gradient(270deg, #8C32F0 0%, #E73587 100%);
+        color: white;
+        border-radius: 0;
+        width: 140px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 15.1px;
+        border: none;
+    }
+    #portofolio{
+        scroll-margin-top: 40px;
+    }
+</style>

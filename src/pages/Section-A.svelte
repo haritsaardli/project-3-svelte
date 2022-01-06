@@ -18,9 +18,12 @@
         font-size: 12px;
         line-height: 15.1px;
     }
+    #home{
+        scroll-margin-top: 100px;
+    }
 </style>
 
-<div class="container-fluid mt-5">
+<div id="home" class="container-fluid" style="margin-top: 4rem;">
     <!-- <h1>Sectiona A</h1> -->
     <div class="row ml-5 align-items-center">
         <div class="col">
