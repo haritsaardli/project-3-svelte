@@ -1,4 +1,4 @@
- [PREVIEW](https://www.google.com/)
+ [PREVIEW](https://project-3-svelte.netlify.app/)
 
 *Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
 
