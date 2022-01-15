@@ -1,6 +1,12 @@
 <script>
-// import { element } from "svelte/internal";
-
+    function scroll(event) {
+        event.preventDefault();
+        if (event.deltaY > 0) {
+            scrollRight();
+        } else {
+            scrollLeft();
+        }
+    }
 
     function scrollRight() {
         // document.getElementById('content').scrollLeft += 150
@@ -17,6 +23,18 @@
             behavior: 'smooth'
         })
     }
+
+    let card = [
+        { images : 'images/section-B/card-1.svg',bkg: '#FDF8E3' },
+        { images : 'images/section-B/card-2.svg',bkg: '#F0F3FA' },
+        { images : 'images/section-B/card-3.svg',bkg: '#FEEFF0' },
+        { images : 'images/section-B/card-1.svg',bkg: '#FDF8E3' },
+        { images : 'images/section-B/card-2.svg',bkg: '#F0F3FA' },
+        { images : 'images/section-B/card-3.svg',bkg: '#FEEFF0' },
+        { images : 'images/section-B/card-1.svg',bkg: '#FDF8E3' },
+        { images : 'images/section-B/card-2.svg',bkg: '#F0F3FA' },
+        { images : 'images/section-B/card-3.svg',bkg: '#FEEFF0' },
+    ]
 </script>
 
 <style>
@@ -29,7 +47,7 @@
     }
     p{
         color: #2B2B2B;
-        size: 20px;
+        font-size: 20px;
         line-height: 25.17px;
         font-weight: 500;
     }
@@ -58,12 +76,6 @@
 
     .background{
         background: linear-gradient(0deg, rgba(2,14,53,1) 50%, rgba(255,255,255,1) 50%);
-    }
-
-    .scrollContainer{
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
     }
 
     #about, #services{
@@ -104,67 +116,20 @@
         </div>
         <div class="col-md-auto m-0 p-0">
             <div class="container">
-                <div id="content" class="row d-flex flex-row flex-nowrap overflow-auto">
-                    <div class="col">
-                        <div class="card" style=" background: #FDF8E3;">
-                            <img src="images/section-B/card-1.svg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <p class="card-title">App Development</p>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <button href="/" class="btn">READ MORE</button>
+                <div on:mousewheel={scroll} id="content" class="row d-flex flex-row flex-nowrap overflow-auto">
+
+                    {#each card as {images, bkg}}
+                        <div class="col">
+                            <div class="card" style=" background: {bkg};">
+                                <img src="{images}" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="card-title">App Development</p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <button href="/" class="btn">READ MORE</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="background: #F0F3FA;">
-                            <img src="images/section-B/card-2.svg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <p class="card-title">Web Development</p>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <button href="/" class="btn">READ MORE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="background: #FEEFF0;">
-                            <img src="images/section-B/card-3.svg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <p class="card-title">UI UX Design</p>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <button href="/" class="btn">READ MORE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style=" background: #FDF8E3;">
-                            <img src="images/section-B/card-1.svg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <p class="card-title">App Development</p>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <button href="/" class="btn">READ MORE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="background: #F0F3FA;">
-                            <img src="images/section-B/card-2.svg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <p class="card-title">Web Development</p>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <button href="/" class="btn">READ MORE</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card" style="background: #FEEFF0;">
-                            <img src="images/section-B/card-3.svg" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <p class="card-title">UI UX Design</p>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <button href="/" class="btn">READ MORE</button>
-                            </div>
-                        </div>
-                    </div>
+                    {/each}
                     
                 </div>
             </div>
